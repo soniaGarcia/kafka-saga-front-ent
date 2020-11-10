@@ -4,39 +4,10 @@ import { Apollo, ApolloModule } from 'apollo-angular';
 import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
-/* const uri = 'http://localhost:8090/graphql'; // <-- add the URL of the GraphQL server here
-const secondUri = 'http://localhost:8080/graphql'; // <-- add the URL of the GraphQL server here
-
-export function createApollo(httpLink: HttpLink)  {
-  return {
-    link: httpLink.create({ uri }),
-    cache: new InMemoryCache(),
-  };
-}
-
-
-export function createApolloNew(httpLink: HttpLink)  {
-  return {
-      link: httpLink.create({ uri: secondUri }),
-      cache: new InMemoryCache()
-  };
-} */
 
 @NgModule({
   exports: [ApolloModule, HttpLinkModule],
   providers: [
-/*     {
-      name:"second",
-      provide: APOLLO_OPTIONS,
-      useFactory: createApolloNew,
-      deps: [HttpLink],
-    },
-    {
-      name:"default",
-      provide: APOLLO_OPTIONS,
-      useFactory: createApollo,
-      deps: [HttpLink],
-    }*/
   ], 
 })
 export class GraphQLModule { 
