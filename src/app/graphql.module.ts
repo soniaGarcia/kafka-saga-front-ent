@@ -42,8 +42,8 @@ export function createApolloNew(httpLink: HttpLink)  {
 export class GraphQLModule { 
 
 
-  private readonly URI1: string = 'http://localhost:8090/graphql';
-  private readonly URI2: string = 'http://localhost:8080/graphql';
+  private readonly URI1: string = 'http://historyservice-saga-pattern.10.100.103.15.xip.io/graphql';
+  private readonly URI2: string = 'http://orderservice-saga-pattern.10.100.103.15.xip.io/graphql';
 
   constructor(
     apollo: Apollo,
